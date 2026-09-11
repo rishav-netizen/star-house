@@ -113,10 +113,10 @@ And scaled up with **Size 8**:
 ## 📁 Repository Structure
 
 ```tree
-house/
+star-house/
+├── assets/         # Project logos and visual assets
 ├── house.c         # Primary interactive application (prompts user for size)
 ├── house_cmd.c     # CLI argument version (accepts size via argv: ./house <size>)
-├── star_figs.c     # Foundational pattern laboratory (recursive & iterative triangles)
 └── README.md       # Project documentation
 ```
 
@@ -124,7 +124,6 @@ house/
 
 - **[`house.c`](house.c)**: Prompts the user via `scanf` with a validation loop (`get_positive_int()`) requiring a minimum size of 6, then renders the complete building.
 - **[`house_cmd.c`](house_cmd.c)**: Command-line interface alternative that reads the height directly from `argv[1]`.
-- **[`star_figs.c`](star_figs.c)**: Exploratory practice module experimenting with recursive divide-and-conquer (`topleft`, `bottomleft`) and nested loop iterative geometry (`topright`, `bottomright`).
 
 ---
 
@@ -181,28 +180,11 @@ Run with arguments:
 
 ---
 
-#### 3. Pattern Laboratory (`star_figs.c`)
-
-Explore the underlying geometric primitives:
-```bash
-gcc -Wall -Wextra -O2 star_figs.c -o star_figs
-./star_figs
-```
-
-This file showcases:
-- **`topleft(h)`**: Recursive inverted left-aligned triangle
-- **`bottomleft(h)`**: Recursive standard left-aligned triangle
-- **`topright(h)`**: Iterative inverted right-aligned triangle
-- **`bottomright(h)`**: Iterative standard right-aligned triangle
-
----
-
 ## 🧠 Concepts Demonstrated
 
 - **Control Flow & Loops**: Nested loops (`for`, `while`, `do-while`) for multi-dimensional coordinate spaces.
 - **Parametric Geometry**: Translation of geometric blueprints into integer arithmetic equations.
 - **Function Decomposition**: Deconstruction of a complex visual output into clean, reusable modular units.
-- **Recursion**: Head vs. tail recursion mechanisms implemented in `star_figs.c`.
 - **Input Sanitization**: Handling boundary conditions and user error constraints.
 
 ---

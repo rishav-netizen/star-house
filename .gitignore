@@ -1,8 +1,10 @@
 # Compiled binaries
 house
 house_cmd
-star_figs
 *.o
+
+# Practice files
+star_figs*
 
 # OS specific files
 .DS_Store
