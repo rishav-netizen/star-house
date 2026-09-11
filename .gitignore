@@ -1,0 +1,9 @@
+# Compiled binaries
+house
+house_cmd
+star_figs
+*.o
+
+# OS specific files
+.DS_Store
+*.swp

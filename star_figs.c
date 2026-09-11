@@ -5,15 +5,15 @@ void bottomleft(int h);
 void bottomright(int h);
 void topright(int h);
 
-int main(void)
+int main()
 {
-    topleft(5);
+    // topleft(5);
     bottomleft(5);
-    bottomright(5);
-    topright(5);
+    // bottomright(5);
+    // topright(5);
 }
 
-void topleft(int h)
+void topleft(int h) //? return_type func_name(agruments)
 {
     if (h<=0)
     {

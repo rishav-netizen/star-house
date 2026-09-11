@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int get_positive_int(void);
+// int get_positive_int(void);
 void space(int h, int i);
 void star(int i);
 void star_(int i);
@@ -13,31 +14,45 @@ void doors(int height);
 void baseline(int height);
 void window_struct(int height, int deduction);
 
-int main()
+int main(int argc, char argv[])
 {
-    int height = get_positive_int();
-    roof(height);
-    mid(height);
-    windows(height);
-    mid(height);
-    doors(height);
-    baseline(height);
-    printf("\n");
-    printf("\n");
-}
-
-
-int get_positive_int(void)
-{
-    int n;
-    do
+    // int height = get_positive_int();
+    if (argc == 1 || argc > 2)
     {
-        printf("Size?(min 6): ");
-        scanf("%d", &n);
+        printf("Usage: ./house size.\n");
+        return 1;
     }
-    while (n<6);
-    return n;
+    else
+    {
+        int height = atoi(argv[1]);
+        if (height < 6)
+        {
+            printf("Size too less!\n");
+            return 2;
+        }
+        roof(height);
+        mid(height);
+        windows(height);
+        mid(height);
+        doors(height);
+        baseline(height);
+        printf("\n");
+        printf("\n");
+    }
 }
+
+
+// int get_positive_int(void)
+// {
+//     int n;
+//     do
+//     {
+//         printf("Size?: ");
+//         scanf("%d", &n);
+//     }
+//     while (n<0);
+//     return n;
+// }
 
 void space(int h, int i)
 {
